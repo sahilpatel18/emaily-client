@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Payments from "./Payments";
+import { baseApiUrl } from "../actions/index";
 
 class Header extends React.Component {
   renderContent() {
@@ -23,13 +24,12 @@ class Header extends React.Component {
             Credits: {this.props.auth.credits}
           </li>,
           <li key='2'>
-            <a href='/api/logout'>Logout</a>
+            <a href={`${baseApiUrl}/api/logout`}>Logout</a>
           </li>,
         ];
     }
   }
 
-  
   render() {
     return (
       <nav>
