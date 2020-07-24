@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { FETCH_USER, FETCH_SURVEYS } from "./types";
 
-export const baseApiUrl = `https://intense-fjord-06567.herokuapp.com`;
+export const baseApiUrl = process.env.REACT_APP_BASE_URL
 
 export const fetchUser = () => async (dispatch) => {
   const res = await axios.get(`${baseApiUrl}/api/current_user`);

@@ -12,7 +12,7 @@ class Header extends React.Component {
       case false:
         return (
           <li>
-            <a href='/auth/google'>Login With Google</a>
+            <a href={`${baseApiUrl}/auth/google`}>Login With Google</a>
           </li>
         );
       default:
